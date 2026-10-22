@@ -1,0 +1,22 @@
+# Jekyll build output and caches
+/_site/
+/.sass-cache/
+/.jekyll-cache/
+/.jekyll-metadata
+
+# Bundler / dependencies (Gemfile.lock IS committed)
+/.bundle/
+/vendor/
+/node_modules/
+
+# Editor and OS files
+/.obsidian
+/.claude/settings.local.json
+.DS_Store
+Thumbs.db
+*.log
+
+# Local notes, not published
+design.md
+help.md
+pre-commit-todo.md
