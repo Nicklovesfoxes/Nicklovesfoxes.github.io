@@ -510,22 +510,6 @@ document.documentElement.classList.add("js");
 		if (video.error || video.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) void loadAsBlob();
 	}
 
-	function initPostMenu() {
-		const randomLink = document.getElementById("open-random-post");
-		if (randomLink) {
-			randomLink.addEventListener("click", (event) => {
-				event.preventDefault();
-
-				const raw = String(randomLink.getAttribute("data-posts") || "");
-				const posts = raw.split("|").map((x) => x.trim()).filter(Boolean);
-				if (!posts.length) return;
-
-				const index = Math.floor(Math.random() * posts.length);
-				window.location.assign(posts[index]);
-			}, { passive: false });
-		}
-	}
-
 	function initSessionLink() {
 		const sessionLink = document.getElementById("session-link");
 		if (!sessionLink) return;
@@ -615,7 +599,6 @@ document.documentElement.classList.add("js");
 		);
 	}
 
-	initPostMenu();
 	initSessionLink();
 	initVideoTile();
 	initFingerprinter();
